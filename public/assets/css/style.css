@@ -2323,38 +2323,67 @@ p.form-message.error.form-message.error {
 
 .lang-switcher {
     margin-left: 15px;
+    display: flex;
+    align-items: center;
 }
 
 .lang-switcher .lang-switch {
-    padding: 5px 12px;
-    border: 1px solid #3333cc;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #3333cc;
-    background-color: transparent;
+    padding: 6px 14px !important;
+    border: none !important;
+    border-radius: 20px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #fff !important;
+    background-color: #3333cc !important;
+    text-decoration: none !important;
     -webkit-transition: all 0.3s ease-out 0s;
     -moz-transition: all 0.3s ease-out 0s;
     -ms-transition: all 0.3s ease-out 0s;
     -o-transition: all 0.3s ease-out 0s;
     transition: all 0.3s ease-out 0s;
+    box-shadow: 0 2px 6px rgba(51, 51, 204, 0.3);
+}
+
+/* Override nav-link active indicator */
+.lang-switcher .lang-switch::before {
+    display: none !important;
+    content: none !important;
 }
 
 .lang-switcher .lang-switch:hover {
-    background-color: #3333cc;
-    color: #fff;
+    background-color: #2626a3 !important;
+    color: #fff !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(51, 51, 204, 0.4);
+}
+
+/* Ensure it's not affected by nav-item active states */
+.navigation .navbar .navbar-nav .nav-item.lang-switcher a,
+.navigation .navbar .navbar-nav .nav-item.lang-switcher a:hover,
+.navigation .navbar .navbar-nav .nav-item.lang-switcher.active a {
+    color: #fff !important;
+    background-color: #3333cc !important;
+}
+
+.navigation .navbar .navbar-nav .nav-item.lang-switcher a::before,
+.navigation .navbar .navbar-nav .nav-item.lang-switcher a:hover::before,
+.navigation .navbar .navbar-nav .nav-item.lang-switcher.active a::before {
+    display: none !important;
+    height: 0 !important;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .lang-switcher {
         margin-left: 0;
-        margin-top: 10px;
+        margin-top: 15px;
+        justify-content: center;
     }
 }
 
 @media (max-width: 767px) {
     .lang-switcher {
         margin-left: 0;
-        margin-top: 10px;
+        margin-top: 15px;
+        justify-content: center;
     }
 }
