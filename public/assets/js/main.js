@@ -58,36 +58,28 @@
     });
 
     //===== Navi active
+    var navSections = $(".navbar-nav .nav-item > a.page-scroll[href^='#']")
+        .map(function () {
+            var target = $($(this).attr("href"));
+            return target.length ? { item: $(this).parent(), target: target } : null;
+        })
+        .get();
+
     $(window).on("scroll", function (event) {
-        //Init
-        if ($(this).scrollTop() + 200 < $("#about").offset().top) {
-            $(".nav-item").removeClass("active");
-            $(".nav-item:nth-child(1)").addClass("active");
-        } else if (
-            //About-area
-            $(this).scrollTop() + 200 > $("#about").offset().top &&
-            $(this).scrollTop() + 200 < $("#experience").offset().top
-        ) {
-            $(".nav-item").removeClass("active");
-            $(".nav-item:nth-child(2)").addClass("active");
-        } else if (
-            //===== Experiene-area
-            $(this).scrollTop() + 200 > $("#experience").offset().top &&
-            $(this).scrollTop() + 200 < $("#work").offset().top
-        ) {
-            $(".nav-item").removeClass("active");
-            $(".nav-item:nth-child(3)").addClass("active");
-        } else if (
-            //===== Portfolio-area
-            $(this).scrollTop() + 200 > $("#work").offset().top &&
-            $(this).scrollTop() < $("#contact").offset().top - 600
-        ) {
-            $(".nav-item").removeClass("active");
-            $(".nav-item:nth-child(4)").addClass("active");
+        if (!navSections.length) return;
+        var scrollTop = $(this).scrollTop();
+        var current = navSections[0];
+        if (scrollTop + $(window).height() >= $(document).height() - 2) {
+            current = navSections[navSections.length - 1];
         } else {
-            $(".nav-item").removeClass("active");
-            $(".nav-item:nth-child(5)").addClass("active");
+            $.each(navSections, function (_, section) {
+                if (scrollTop + 200 >= section.target.offset().top) current = section;
+            });
         }
+        $.each(navSections, function (_, section) {
+            section.item.removeClass("active");
+        });
+        current.item.addClass("active");
     });
 
     //===== Counter Up
