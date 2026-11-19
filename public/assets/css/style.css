@@ -2312,6 +2312,49 @@ p.form-message.error.form-message.error {
 /* GAZAI stats for easy editing */
 .gazai-stat-creators,
 .gazai-stat-works,
-.gazai-stat-partners {
+.gazai-stat-partners,
+.gazai-stat-prs {
     font-weight: 600;
+}
+
+/*===========================
+       12.LANGUAGE SWITCHER css 
+===========================*/
+
+.lang-switcher {
+    margin-left: 15px;
+}
+
+.lang-switcher .lang-switch {
+    padding: 5px 12px;
+    border: 1px solid #3333cc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #3333cc;
+    background-color: transparent;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+.lang-switcher .lang-switch:hover {
+    background-color: #3333cc;
+    color: #fff;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .lang-switcher {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .lang-switcher {
+        margin-left: 0;
+        margin-top: 10px;
+    }
 }
