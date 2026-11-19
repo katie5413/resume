@@ -5,9 +5,9 @@
  * applied to all pages in both languages.
  */
 const GAZAI_STATS = {
-    creators: '50K+',
-    works: '1M+',
-    partners: '20+',
+    creators: '55K+',
+    works: '1.5M+',
+    partners: '40+',
     pullRequests: '500+'
 };
 
