@@ -1339,15 +1339,9 @@ p {
 }
 
 .about-block {
-    margin-top: 40px;
-    padding-top: 30px;
+    margin-top: 30px;
+    padding-top: 24px;
     border-top: 1px solid #ececf3;
-}
-
-.about-block-heading {
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 16px;
 }
 
 .education-item {
