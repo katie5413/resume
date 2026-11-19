@@ -100,7 +100,7 @@
 
     $(".job-gallery").each(function () {
         $(this).magnificPopup({
-            delegate: "a.job-shot",
+            delegate: "a.job-shot-image",
             type: "image",
             gallery: {
                 enabled: true,
