@@ -1461,9 +1461,27 @@ p {
     box-shadow: 0px 0px 21px 0px rgba(152, 152, 152, 0.23);
 }
 
+.job-card {
+    height: auto;
+    margin-bottom: 24px;
+    padding: 28px 32px;
+    text-align: left;
+}
+
+@media (max-width: 767px) {
+    .job-card {
+        padding: 20px;
+    }
+}
+
+.job-card .job-title {
+    display: block;
+    margin-bottom: 8px;
+}
+
 .job-detail {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 28px;
     margin-bottom: 12px;
 }
 
@@ -2302,15 +2320,14 @@ p.form-message.error.form-message.error {
 }
 
 .job-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin: 12px 0 8px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+    gap: 16px;
+    margin: 16px 0 8px;
 }
 
 .job-shot {
     display: block;
-    width: 200px;
     border: 1px solid #ececf3;
     border-radius: 6px;
     overflow: hidden;
@@ -2334,15 +2351,9 @@ p.form-message.error.form-message.error {
 
 .job-shot span {
     display: block;
-    padding: 6px 10px;
-    font-size: 13px;
+    padding: 8px 12px;
+    font-size: 14px;
     color: #6a6a7a;
-}
-
-@media (max-width: 575px) {
-    .job-shot {
-        width: calc(50% - 6px);
-    }
 }
 
 /* GAZAI stats for easy editing */
