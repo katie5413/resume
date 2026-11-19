@@ -7,8 +7,7 @@
 const GAZAI_STATS = {
     creators: '55K+',
     works: '1.5M+',
-    partners: '40+',
-    pullRequests: '500+'
+    partners: '40+'
 };
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -20,8 +19,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     document.querySelectorAll('.gazai-stat-partners').forEach(el => {
         el.textContent = GAZAI_STATS.partners;
-    });
-    document.querySelectorAll('.gazai-stat-prs').forEach(el => {
-        el.textContent = GAZAI_STATS.pullRequests;
     });
 });
