@@ -1338,13 +1338,13 @@ p {
     color: #32333c;
 }
 
-.education {
+.about-block {
     margin-top: 40px;
     padding-top: 30px;
     border-top: 1px solid #ececf3;
 }
 
-.education-heading {
+.about-block-heading {
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 16px;
@@ -2277,72 +2277,34 @@ p.form-message.error.form-message.error {
        11.FEATURED css 
 ===========================*/
 
-.featured-area {
-    background-color: #fff;
+.featured-entry {
+    font-size: 14px;
+    line-height: 1.6;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .featured-area {
-        padding-top: 90px;
-        padding-bottom: 100px;
-    }
-}
-
-@media (max-width: 767px) {
-    .featured-area {
-        padding-top: 70px;
-        padding-bottom: 80px;
-    }
-}
-
-.featured-item .card {
-    -webkit-transition: all 0.3s ease-out 0s;
-    -moz-transition: all 0.3s ease-out 0s;
-    -ms-transition: all 0.3s ease-out 0s;
-    -o-transition: all 0.3s ease-out 0s;
-    transition: all 0.3s ease-out 0s;
-}
-
-.featured-item .card:hover {
-    -webkit-box-shadow: 0px 0px 21px 0px rgba(152, 152, 152, 0.23);
-    -moz-box-shadow: 0px 0px 21px 0px rgba(152, 152, 152, 0.23);
-    box-shadow: 0px 0px 21px 0px rgba(152, 152, 152, 0.23);
-}
-
-.featured-item .card-content {
-    padding: 25px;
-}
-
-.featured-title {
-    font-size: 20px;
+.featured-link {
+    font-size: 16px;
     font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.featured-title a {
     color: #32333c;
-    -webkit-transition: all 0.3s ease-out 0s;
-    -moz-transition: all 0.3s ease-out 0s;
-    -ms-transition: all 0.3s ease-out 0s;
-    -o-transition: all 0.3s ease-out 0s;
-    transition: all 0.3s ease-out 0s;
+    -webkit-transition: color 0.3s ease-out 0s;
+    transition: color 0.3s ease-out 0s;
 }
 
-.featured-title a:hover {
+.featured-link:hover {
     color: #3333cc;
 }
 
 .featured-date {
-    display: block;
-    font-size: 14px;
-    color: #8a8fa3;
-    margin-bottom: 10px;
+    margin-left: 8px;
+    font-size: 13px;
+    color: #8a8a99;
 }
 
 .featured-description {
-    font-size: 16px;
-    line-height: 24px;
-    color: #8a8fa3;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 4px 0 0;
+    color: #8a8a99;
 }
 
 /* GAZAI stats for easy editing */
