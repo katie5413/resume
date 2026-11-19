@@ -98,6 +98,24 @@
         },
     });
 
+    $(".job-duration").each(function () {
+        var parse = function (value) {
+            var parts = value.split(".");
+            return Number(parts[0]) * 12 + Number(parts[1]) - 1;
+        };
+        var now = new Date();
+        var endAttr = $(this).attr("data-end");
+        var end = endAttr ? parse(endAttr) : now.getFullYear() * 12 + now.getMonth();
+        var months = end - parse($(this).attr("data-start"));
+        if (months < 1) return;
+        var years = Math.floor(months / 12);
+        var rest = months % 12;
+        var label = [];
+        if (years) label.push(years + "Y");
+        if (rest) label.push(rest + "M");
+        $(this).text(label.join(" "));
+    });
+
     $(".job-gallery").each(function () {
         $(this).magnificPopup({
             delegate: "a.job-shot-image",
