@@ -2325,7 +2325,6 @@ p.form-message.error.form-message.error {
     margin-left: 15px;
     display: flex;
     align-items: center;
-    height: 100%;
 }
 
 .navigation .navbar .navbar-nav .nav-item.lang-switcher {
@@ -2340,6 +2339,7 @@ p.form-message.error.form-message.error {
     font-size: 13px !important;
     font-weight: 600 !important;
     line-height: 1.5 !important;
+    margin: -4px 0;
     color: #fff !important;
     background-color: #3333cc !important;
     text-decoration: none !important;
