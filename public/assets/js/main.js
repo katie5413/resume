@@ -98,6 +98,16 @@
         },
     });
 
+    $(".job-gallery").each(function () {
+        $(this).magnificPopup({
+            delegate: "a.job-shot",
+            type: "image",
+            gallery: {
+                enabled: true,
+            },
+        });
+    });
+
     //===== Back to top
 
     // Show or hide the sticky footer button
