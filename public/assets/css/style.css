@@ -2325,14 +2325,21 @@ p.form-message.error.form-message.error {
     margin-left: 15px;
     display: flex;
     align-items: center;
+    height: 100%;
+}
+
+.navigation .navbar .navbar-nav .nav-item.lang-switcher {
+    display: flex;
+    align-items: center;
 }
 
 .lang-switcher .lang-switch {
-    padding: 6px 14px !important;
+    padding: 5px 14px !important;
     border: none !important;
     border-radius: 20px !important;
     font-size: 13px !important;
     font-weight: 600 !important;
+    line-height: 1.5 !important;
     color: #fff !important;
     background-color: #3333cc !important;
     text-decoration: none !important;
